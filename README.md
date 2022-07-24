@@ -1,4 +1,6 @@
 # NK-EXAMPLES
+To run these Matlab examples execute <TT>driver.m</TT> at the Matlab prompt. <p>
+  
 The examples require a time-dependent Tracer Transport Matrix (TTM) that is discretized in time using 12 equally spaced time-points.
 
 A TMM is available in the file <TT> x3POP_MTM_SPRING2022.mat</TT>, which will be downloaded automatically if the file does not already exist in the directory where <b> driver.m </b> is located.
