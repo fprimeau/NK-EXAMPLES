@@ -8,6 +8,6 @@ A TMM is available in the file <TT> x3POP_MTM_SPRING2022.mat</TT>, which will be
 <TT>x3POP_MTM_SPRING2022.mat</TT> contains the following variables: <p>
 <TT> MTM</TT>: a structure with the 12 monthly tracer transport matrices <p>
 <TT> grd</TT>: a structure with the mesh size definition <p>
-<TT>M3d</TT>: a three dimensional wet-dry mask with wet points = 1 and dry points = 0 <p> <p>
+  <TT>M3d</TT>: a three dimensional wet-dry mask with wet points <TT> M3d(i,j,k) = 1</TT> and dry points <TT> M3d(i,j,k) = 0</TT> <p> <p>
   
 The first example solves for the cyclo-stationary ideal age field using the Newton-Krylov method with a preconditioner. <p>
