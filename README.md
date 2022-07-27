@@ -24,6 +24,8 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 
 <p>  
 3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
+  ![NK_drift_Linfinity_norm](https://user-images.githubusercontent.com/7294603/181344149-e02aa271-ad9d-45b8-a6b1-e85304aedfd7.png)
+
 <p>
 # Bibliography
 <p>  
