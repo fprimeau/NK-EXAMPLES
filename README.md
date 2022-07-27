@@ -28,7 +28,7 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 ![NK_drift_Linfinity_norm](https://user-images.githubusercontent.com/7294603/181362571-4163aa5e-a837-4058-a817-5d00e7afdfbc.png)
 ![drift_before_and_after](https://user-images.githubusercontent.com/7294603/181362632-6ae98b63-1a84-4c72-a852-60d74aa02536.png)
 <p>
-  The left panel shows the L-$\infty$ norm of the 1-year drift in the ideal age during for each call to $\boldsymbol{G}(\boldsymbol{x})$ by the <TT>nsoli.m</TT> solver. The curves in the right panel show the ideal age as a function of time obtained by time-stepping the equations forward in time. The black curve corresponds to the random vector initialization and the red curve corresponds to the initialization using the output from the NK solver. 
+  <strong>Figures 1</strong>  The left (or upper) panel shows the L-$\infty$ norm of the 1-year drift in the ideal age during for each call to $\boldsymbol{G}(\boldsymbol{x})$ by the <TT>nsoli.m</TT> solver. The curves in the right (or lower) panel show the ideal age as a function of time obtained by time-stepping the equations forward in time. The black curve corresponds to the random vector initialization and the red curve corresponds to the initialization using the output from the NK solver. 
 <p>
 # Bibliography
 <p>  
