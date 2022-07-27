@@ -24,12 +24,24 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 
 <p>  
 3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
+<p>
+# Bibliography
 <p>  
 Xingwen Li, François W. Primeau, A fast Newton–Krylov solver for seasonally varying global ocean biogeochemistry models,
 Ocean Modelling, Volume 23, Issues 1–2 2008, Pages 13-20, ISSN 1463-5003,
 https://doi.org/10.1016/j.ocemod.2008.03.001.
 (https://www.sciencedirect.com/science/article/pii/S1463500308000371)
+<p>
+Ann Bardin, François Primeau, Keith Lindsay, An offline implicit solver for simulating prebomb radiocarbon,
+Ocean Modelling, Volume 73, 2014, Pages 45-58, ISSN 1463-5003,
+https://doi.org/10.1016/j.ocemod.2013.09.008.
+(https://www.sciencedirect.com/science/article/pii/S1463500313001820)
 <p> 
+Ann Bardin, François Primeau, Keith Lindsay, Andrew Bradley, Evaluation of the accuracy of an offline seasonally-varying matrix transport model for simulating ideal age, Ocean Modelling,
+Volume 105, 2016, Pages 25-33, ISSN 1463-5003,
+https://doi.org/10.1016/j.ocemod.2016.07.003.
+(https://www.sciencedirect.com/science/article/pii/S1463500316300750)
+<p>
 Weiwei Fu, François Primeau, Application of a fast Newton–Krylov solver for equilibrium simulations of phosphorus and oxygen,
 Ocean Modelling, Volume 119, 2017, Pages 35-44, ISSN 1463-5003,
 https://doi.org/10.1016/j.ocemod.2017.09.005.
