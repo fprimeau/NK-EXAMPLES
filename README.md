@@ -12,7 +12,7 @@ A TMM is available in the file <TT> x3POP_MTM_SPRING2022.mat</TT>, which will be
 <p> 
 The example in <TT>age_driver.m</TT> uses the ideal age equation:
  
-$$\frac{∂\boldsymbol{x}}{∂t} + \left[\mathbf{T}(t) -\mathbf{R}\right]\boldsymbol{x} = \boldsymbol{1}$$
+$$\frac{∂\boldsymbol{x}}{∂t} + \left[\mathbf{T}(t) + \mathbf{R}\right]\boldsymbol{x} = \boldsymbol{1}$$
 
 where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix that is discretized in time using twelve piecewise constant advective-diffusive flux divertence operators and $\mathbf{R}$ is a constant surface restoring matrix that restores the tracer in the top layer of the model to zero with a time-scale of 1 day. 
  
