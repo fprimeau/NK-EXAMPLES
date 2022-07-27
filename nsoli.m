@@ -210,7 +210,7 @@ while(fnrm > stop_tol & itc < maxit)
     end
 %
     outstat(itc+1, :) = [itc fnrm inner_it_count rat iarm];
-    fprintf('\n outer \n');
+    fprintf('\n Newton Step \n');
     %
 end
 sol = x;
