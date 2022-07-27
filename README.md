@@ -30,8 +30,8 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 <p>
   <strong>Figures 1</strong>  The left (or upper) panel shows the L-$\infty$ norm of the 1-year drift in the ideal age during for each call to $\boldsymbol{G}(\boldsymbol{x})$ by the <TT>nsoli.m</TT> solver. Evaluating $\boldsymbol{G}(\boldsymbol{x})$ is equivalent to running the ideal age equation forward in time for one year. Thus the NK spin-up of the ideal age tracer is equivalent to $\sim$22 years of integration in terms of computational cost.  The curves in the right (or lower) panel show the ideal age as a function of time obtained by time-stepping the equations forward in time. The black curve corresponds to the random vector initialization and the red curve corresponds to the initialization using the output from the NK solver. 
 <p>
-# Bibliography
-<p>  
+<strong> Bibliography</strong>
+<p>
 Xingwen Li, François W. Primeau, A fast Newton–Krylov solver for seasonally varying global ocean biogeochemistry models,
 Ocean Modelling, Volume 23, Issues 1–2 2008, Pages 13-20, ISSN 1463-5003,
 https://doi.org/10.1016/j.ocemod.2008.03.001.
