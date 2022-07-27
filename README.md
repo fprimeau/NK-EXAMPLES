@@ -14,10 +14,10 @@ The example in <TT>age_driver.m</TT> uses the ideal age equation:
  
 $$\frac{∂\boldsymbol{x}}{∂t} + \left[\mathbf{T}(t) + \mathbf{R}\right]\boldsymbol{x} = \boldsymbol{1}$$
 
-where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix that is discretized in time using twelve piecewise constant advective-diffusive flux divertence operators and $\mathbf{R}$ is a constant surface restoring matrix that restores the tracer in the top layer of the model to zero with a time-scale of 1 day. 
+where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$ that is discretized in time using twelve piecewise constant advective-diffusive flux divertence operators and $\mathbf{R}$ is a constant surface restoring matrix that restores the tracer in the top layer of the model to zero with a time-scale of 1 day. 
  
 <p>
   1. The script first initializes the age variable with a vector of independently and identically distributed random variables drawn from a normal distribution with mean 2000 years and variance (20 years)^2 and time-steps the equations forward in time for three years. The drift illustrates the slow adjustment to equilibrium. 
-<p>2. Then the script uses the same initial random vector to initialize the Newton-Krylov solver to find the cyclo-stationary state. 
+<p>2. Then the script uses the same initial random vector to initialize the Newton-Krylov solver to find the cyclo-stationary state. The NK solver uses a preconditioner applied to the function $G(\boldsymbol{x}) \equiv \boldsymbol{\phi}(\boldsymbol{x},t)-\boldsymbol{x}(t)$, where $\boldsymbol{\phi}(\boldsymbol{x},t)$ propagates the ideal age from $\boldsymbol{x}(t)$ to $\bolsymbol{x}(t+T)$ using the ideal age equation.  
 <p>
   3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
