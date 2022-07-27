@@ -1,4 +1,4 @@
-# NK-EXAMPLES
+# NK-EXAMPLES: Ideal Age
 To run these Matlab examples execute <TT>age_driver.m</TT> at the Matlab prompt. <p>
   
 The examples require a time-dependent Tracer Transport Matrix (TTM) that is discretized in time using 12 equally spaced time-points.
