@@ -24,3 +24,8 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 
 <p>  
 3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
+  
+Xingwen Li, François W. Primeau, A fast Newton–Krylov solver for seasonally varying global ocean biogeochemistry models,
+Ocean Modelling, Volume 23, Issues 1–2 2008, Pages 13-20, ISSN 1463-5003,
+https://doi.org/10.1016/j.ocemod.2008.03.001.
+(https://www.sciencedirect.com/science/article/pii/S1463500308000371)
