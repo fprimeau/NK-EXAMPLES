@@ -10,9 +10,9 @@ A TMM is available in the file <TT> x3POP_MTM_SPRING2022.mat</TT>, which will be
 <TT> grd</TT>: a structure with the mesh size definition <p>
   <TT>M3d</TT>: a three dimensional wet-dry mask with wet points <TT> M3d(i,j,k) = 1</TT> and dry points <TT> M3d(i,j,k) = 0</TT> <p> 
 <p> 
-  1. The example in <TT>age_driver.m</TT> solves for the cyclo-stationary ideal age equation. 
+ The example in <TT>age_driver.m</TT> does the following:
 <p>
-  2. The script first initializes the age variable with a vector of independently and identically distributed random variables drawn from a normal distribution with mean 2000 years and variance (20 years)^2 and time-steps the equations forward in time for three years. The drift illustrates the slow adjustment to equilibrium. 
-<p>Then the script uses the same initial random vector to initialize the Newton-Krylov solver to find the cyclo-stationary state. 
+  1. The script first initializes the age variable with a vector of independently and identically distributed random variables drawn from a normal distribution with mean 2000 years and variance (20 years)^2 and time-steps the equations forward in time for three years. The drift illustrates the slow adjustment to equilibrium. 
+<p>2. Then the script uses the same initial random vector to initialize the Newton-Krylov solver to find the cyclo-stationary state. 
 <p>
   3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
