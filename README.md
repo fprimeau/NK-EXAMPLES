@@ -23,12 +23,12 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 2. Then the script uses the same initial random vector to initialize the Newton-Krylov solver to find the cyclo-stationary state. The NK solver uses a preconditioner applied to the function $\boldsymbol{G}(\boldsymbol{x}) \equiv \boldsymbol{\phi}(\boldsymbol{x},t)-\boldsymbol{x}(t)$, where $\boldsymbol{\phi}(\boldsymbol{x},t)$ uses the ideal age equation and the initial condition, $\boldsymbol{x}$, to find the age one year later, i.e., to find $\boldsymbol{x}(t+T)$, the age at time $t+T$.  The preconditioner that allows for rapid convergence of the Krylov solver consists of applying $\left(\left[\overline{\mathbf{T}}+\mathbf{R}\right]^{-1}\!-\mathbf{I}\right)$ to $\boldsymbol{G}(\boldsymbol{x})$.
 
 <p>  
-3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
+3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p
 
-<img src="https://user-images.githubusercontent.com/7294603/181344149-e02aa271-ad9d-45b8-a6b1-e85304aedfd7.png" "width = 400" height = "400"/>
-![NK_drift_Linfinity_norm](https://user-images.githubusercontent.com/7294603/181344149-e02aa271-ad9d-45b8-a6b1-e85304aedfd7.png)
-![drift_before_and_after](https://user-images.githubusercontent.com/7294603/181344412-0605d791-f0b9-4dc4-9739-ad20a8cbfef0.png)
-
+![NK_drift_Linfinity_norm](https://user-images.githubusercontent.com/7294603/181362571-4163aa5e-a837-4058-a817-5d00e7afdfbc.png)
+![drift_before_and_after](https://user-images.githubusercontent.com/7294603/181362632-6ae98b63-1a84-4c72-a852-60d74aa02536.png)
+<p>
+  The left panel shows the L-$\infty$ norm of the 1-year drift in the ideal age during for each call to $\boldsymbol{G}(\boldsymbol{x})$ by the <TT>nsoli.m</TT> solver. The curves in the right panel show the ideal age as a function of time obtained by time-stepping the equations forward in time. The black curve corresponds to the random vector initialization and the red curve corresponds to the initialization using the output from the NK solver. 
 <p>
 # Bibliography
 <p>  
