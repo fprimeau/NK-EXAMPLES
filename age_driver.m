@@ -42,7 +42,7 @@ name = 'cold_start';
 fprintf( '%s:\n', name );
 iwet = sim.iwet;
 %x    = sim.x0(iwet);  % steady state solution obtained using the annual average of the TTM 
-x0 = 2000*T+20*randn(length(iwet),1); % init with iid x0 ~ N(2000 yrs, (20 yrs)^2
+x0 = 2000*T+20*randn(length(iwet),1); % init with iid x0 ~ N(2000 yrs, (20 yrs)^2)
 tic;
 x = x0;
 % run for three years
