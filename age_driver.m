@@ -36,7 +36,7 @@ sim.mynorm             = mynorm;
 fprintf('Initializing the age solver...\n');
 sim = phi_age( sim, MTM);
 %
-% Time step forward for 5 years to illustrate the drift
+% Time step forward for 3 years to illustrate the drift
 %
 name = 'cold_start';
 fprintf( '%s:\n', name );
