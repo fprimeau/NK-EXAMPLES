@@ -1,4 +1,4 @@
-# NK-EXAMPLES
+# NK-EXAMPLES: Ideal Age
 To run these Matlab examples execute <TT>age_driver.m</TT> at the Matlab prompt. <p>
   
 The examples require a time-dependent Tracer Transport Matrix (TTM) that is discretized in time using 12 equally spaced time-points.
@@ -23,10 +23,15 @@ where $\mathbf{T}(t)$ is a time-periodic tracer transport matrix with period $T$
 2. Then the script uses the same initial random vector to initialize the Newton-Krylov solver to find the cyclo-stationary state. The NK solver uses a preconditioner applied to the function $\boldsymbol{G}(\boldsymbol{x}) \equiv \boldsymbol{\phi}(\boldsymbol{x},t)-\boldsymbol{x}(t)$, where $\boldsymbol{\phi}(\boldsymbol{x},t)$ uses the ideal age equation and the initial condition, $\boldsymbol{x}$, to find the age one year later, i.e., to find $\boldsymbol{x}(t+T)$, the age at time $t+T$.  The preconditioner that allows for rapid convergence of the Krylov solver consists of applying $\left(\left[\overline{\mathbf{T}}+\mathbf{R}\right]^{-1}\!-\mathbf{I}\right)$ to $\boldsymbol{G}(\boldsymbol{x})$.
 
 <p>  
-3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p>
+3. Finally the script reruns the model for three years but this time uses the output from the Newton-Krylov solver to initialize the model. The resulting solution does not drift, inidicating that it is a cyclo-stationry state.<p
+
+![NK_drift_Linfinity_norm](https://user-images.githubusercontent.com/7294603/181362571-4163aa5e-a837-4058-a817-5d00e7afdfbc.png)
+![drift_before_and_after](https://user-images.githubusercontent.com/7294603/181362632-6ae98b63-1a84-4c72-a852-60d74aa02536.png)
 <p>
-# Bibliography
-<p>  
+  <strong>Figures 1</strong>  The left (or upper) panel shows the L-$\infty$ norm of the 1-year drift in the ideal age during for each call to $\boldsymbol{G}(\boldsymbol{x})$ by the <TT>nsoli.m</TT> solver. Evaluating $\boldsymbol{G}(\boldsymbol{x})$ is equivalent to running the ideal age equation forward in time for one year. Thus the NK spin-up of the ideal age tracer is equivalent to ~22 years of integration in terms of computational cost.  The curves in the right (or lower) panel show the ideal age as a function of time obtained by time-stepping the equations forward in time. The black curve corresponds to the random vector initialization and the red curve corresponds to the initialization using the output from the NK solver. 
+<p>
+<strong> Bibliography</strong>
+<p>
 Xingwen Li, François W. Primeau, A fast Newton–Krylov solver for seasonally varying global ocean biogeochemistry models,
 Ocean Modelling, Volume 23, Issues 1–2 2008, Pages 13-20, ISSN 1463-5003,
 https://doi.org/10.1016/j.ocemod.2008.03.001.
