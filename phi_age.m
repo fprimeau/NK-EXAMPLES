@@ -44,7 +44,7 @@ function [varargout] = phi_age(varargin)
                   otherwise
                     % 3rd-order Adams Bashforth advection, Euler Forward horizontal diffusion
                     w = (1/12) * ( 23 * C(:,i3) - 16 * C(:,i2) + 5 * C(:,i1) );
-                    rhs = C(:,i3) + dt * rate( w, C(:,i2), month );
+                    rhs = C(:,i3) + dt * rate( w, C(:,i3), month );
                     pntr = i1;
                     i1 = i2; i2 = i3; i3 = pntr;
                 end
